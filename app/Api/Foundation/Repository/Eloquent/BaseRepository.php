@@ -10,7 +10,7 @@ abstract class BaseRepository implements EloquentRepositoryInterface
 
     public function all(array $options = [])
     {
-        return $this->optionsQuery($options)->get();
+        return $this->optionsQuery($options)->orderBy('id','DESC')->get();
     }
 
     public function first(array $relations = [])
